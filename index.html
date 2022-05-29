@@ -153,6 +153,7 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingNine">
+
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                         <h4>Bài 9: Đếm số nguyên</h4>
@@ -160,8 +161,13 @@
                 </h2>
                 <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                     data-bs-parent="#accordionExample">
+                    <input type="number" id="addNumberArr2" class="form-control mt-4" placeholder="Nhập số " />
+                    <button onclick="addNumberToArray2()" class="btn btn-success mt-3">
+                        Thêm số
+                    </button>
+                    <h3 id="showArr2"></h3>
                     <div class="accordion-body">
-                        <button class="btn btn-success" onclick="countcountInterger()">Tính tổng</button>
+                        <button class="btn btn-success" onclick="countInterger()">Tính tổng</button>
                         <h3 id="showCountInterger"></h3>
                     </div>
                 </div>

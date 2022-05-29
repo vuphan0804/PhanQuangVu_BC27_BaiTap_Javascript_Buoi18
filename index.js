@@ -1,4 +1,5 @@
 var numberArr = [];
+var numberArr2 = [];
 // function addNumberToArray() {
 //   let showTemplate = numberArr.map((number) => `${number}`).join(", ");
 //   document.getElementById("showFullArr").innerHTML = showTemplate;
@@ -17,6 +18,15 @@ function addNumberToArray() {
   var divResult = document.getElementById("showFullArr");
   divResult.style.display = "inline";
   divResult.innerHTML = `${numberArr}`;
+}
+
+function addNumberToArray2() {
+  var numberAdd2 = +document.getElementById("addNumberArr2").value;
+  numberArr2.push(numberAdd2);
+
+  var divResult = document.getElementById("showArr2");
+  divResult.style.display = "inline";
+  divResult.innerHTML = `${numberArr2}`;
 }
 
 function calcSumPositive() {
@@ -141,5 +151,38 @@ function isPrime(k) {
     return false;
   } else {
     return true;
+  }
+}
+
+function countInterger() {
+  var count = 0;
+  for (i = 0; i < numberArr2.length; i++) {
+    if (Number.isInteger(numberArr2[i])) {
+      count++;
+    }
+  }
+  var divResult = document.getElementById("showCountInterger");
+  divResult.innerHTML = `Số nguyên: ${count}`;
+}
+
+function compareNumber() {
+  var positive = 0;
+  var negative = 0;
+  for (var i = 0; i < numberArr.length; i++) {
+    if (numberArr[i] > 0) {
+      positive++;
+    } else if (numberArr[i] < 0) {
+      negative++;
+    }
+  }
+  if (positive > negative) {
+    var divResult = document.getElementById("showCompareNumber");
+    divResult.innerHTML = `Số dương > Số âm `;
+  } else if (negative > positive) {
+    var divResult = document.getElementById("showCompareNumber");
+    divResult.innerHTML = `Số âm > Số dương`;
+  } else {
+    var divResult = document.getElementById("showCompareNumber");
+    divResult.innerHTML = `Số âm = Số dương `;
   }
 }
